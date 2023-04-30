@@ -34,7 +34,7 @@ ln -s /data/web_static/releases/test /data/web_static/current
 chown -R ubuntu:ubuntu /data/
 
 # Update Nginx configuration to serve the content of /data/web_static/current to hbnb_static
-# (ex: https://mydomainname.tech/hbnb_static)
+# (ex: https://harley4u.tech/hbnb_static)
 sed -i '/listen 80 default_server;/a location /hbnb_static/ {\n\talias /data/web_static/current/;\n}\n' /etc/nginx/sites-available/default
 
 # Restart Nginx to apply the changes
