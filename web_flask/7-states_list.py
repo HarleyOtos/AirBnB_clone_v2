@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Flask web application to display a list of states.
+Start Flask web application to display a list of states.
 """
 from flask import Flask 
 from flask import render_template
@@ -19,7 +19,7 @@ def teardown(self):
 
 @app.route('/states_list', strict_slashes=False)
 def states_list():
-    """Display a HTML page with the list of all State objects.
+    """Display page with the list of all State objects.
     """
     states = storage.all(State).values()
     states = sorted(states, key=lambda state: state.name)
