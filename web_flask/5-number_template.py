@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-Starts a Flask web application with the following routes
+Starts a Flask web application with number of routes.
 """
-from flask import Flask, render_template
+from flask import Flask
+from flask import render_template
 
 
 app = Flask(__name__)
