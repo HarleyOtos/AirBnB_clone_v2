@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>States</title>
+  </head>
+  <body>
+    <h1>States</h1>
+    <ul>
+      {% for state in states %}
+      <li>{{ state.id }}: <b>{{ state.name }}</b></li>
+        <ul>
+          {% for city in state.cities %}
+          <li>{{ city.id }}: <b>{{ city.name }}</b></li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+      {% if state is not defined %}
+      <h1>Not found!</h1>
+      {% endif %}
+    </ul>
+  </body>
+</html>
