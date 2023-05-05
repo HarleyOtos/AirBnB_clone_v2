@@ -29,7 +29,7 @@ def display_state(id):
     """Displays a state and its cities"""
     state = storage.get(State, id)
     if state is None:
-        return render_template('9-states.html', not_found=True)
+        return render_template('9-not_found.html')
     else:
         cities = sorted(state.cities, key=lambda x: x.name)
         return render_template('9-states.html', state=state, cities=cities)
